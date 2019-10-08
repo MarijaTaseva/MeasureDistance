@@ -29,8 +29,8 @@ namespace MeasureDistance.Implementation
 
                 if (_airports != null)
                 {
-                    GeoCoordinate pin1 = new GeoCoordinate(_airports.FirstOrDefault().Location.Lat, _airports.FirstOrDefault().Location.Lon);
-                    GeoCoordinate pin2 = new GeoCoordinate(_airports.Last().Location.Lat, _airports.Last().Location.Lon);
+                    GeoCoordinate pin1 = new GeoCoordinate(_airports[0].Location.Lat, _airports[0].Location.Lon);
+                    GeoCoordinate pin2 = new GeoCoordinate(_airports[1].Location.Lat, _airports[1].Location.Lon);
 
                     double distanceBetween = pin1.GetDistanceTo(pin2);
                     if (_airports[0].Name != null) _distance.FirstAirportName = _airports[0].Name;
